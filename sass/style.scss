@@ -1,0 +1,256 @@
+//////////////////////////////
+// Set legacy support
+//
+// If you need support for IE6 or IE7, you should install the Box Sizing polyfill.
+// In your project's folder from the command line, type the following:
+// compass install singularitygs/box-sizing
+//////////////////////////////
+$legacy-support-for-ie6:     false;
+$legacy-support-for-ie7:     false;
+$legacy-support-for-mozilla: false;
+
+//////////////////////////////
+// Import Base
+//////////////////////////////
+@import "partials/normalize";
+@import "partials/base";
+
+$break: 406px;
+$grids: 12;
+$gutters: 1/3;
+$grids: add-grid(2 at $break);
+
+* {
+	margin: 0;
+	padding: 0;
+	@include box-sizing(border-box);
+}
+p, li, a {
+	font-size: 1.2em; 
+	font-weight: 600;
+	-webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+html {
+	height: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	body {
+		background: $white repeat;
+		height: 100%;
+		width: 100%;
+		font-family: $sans;
+		letter-spacing: .08em;
+		color : $black;
+		header {
+			width : 100%;
+			height : 60px;
+			//margin-top: -1.4em;
+			position: fixed;
+			background-color: $black;
+			border-bottom: $red dotted 1px;
+			color: $white;
+			h1 {padding-left: 3em; line-height: 1em;}
+			a {
+				color: $white;
+				text-decoration: none;
+				&:hover {
+				color: shade($white, 20%);
+				}	
+			}
+		}
+		#wrapper {
+			//@include breakpoint($break) {
+		  @include grid-span(10, 2);
+			height: auto !important;
+			min-height : 100%;
+			height: 100%;
+			//margin: 0 auto;
+			background: $white repeat;
+			color: $black;	
+			.container {
+				margin: 0 auto ;
+				width: 100%;
+				height: 100%;	
+				background: $white repeat;
+				color: $black;	
+				nav {
+					ul {
+						padding-top: 3em;
+						@include grid-span(4, 5);
+						@include no-bullets;
+						//@include cat-bg;
+						li {
+							//font-weight: bold;
+							list-style: none;
+							text-align: center;
+							padding: 2.5em 0;
+							margin: .2em 0;
+							clear: both;
+							a {
+								font-weight: 900;
+								color: $white;
+								text-shadow: 1px 1px 1px rgba(0.004,0.004,0.004,0);
+								text-decoration: none;
+								&:hover {
+								color: $black;
+								text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+								}	
+							}
+							&:first-of-type {margin-bottom: -.28em; padding-top: .5em;}
+						}
+						
+					}
+							.big {color: black; padding: 0;margin: 0;}
+				}
+			
+				img {
+					@include box-emboss(0.8, 0.05);
+					text-align: center;
+					pointer-event: none;
+				}	
+				#footer-nav {
+					clear: both;
+					text-align: left;
+					color: $black;
+					@include grid-span(3,1);
+					bottom: 6em;
+					position: fixed;
+					ul {
+						@include no-bullets;
+						li a {
+							font-weight: 300;
+							color: $black;
+							line-height: 1.2em;
+							text-decoration: none;
+							&:hover {
+							color: $red;
+							}	
+						}
+					}
+				}
+			}	
+		}		
+			#footer {
+				width: 100%;
+				position: relative;
+				margin-top: 1em;
+				padding: 1em;
+				height: 4em;
+				clear: both;
+				background-color: $white;
+				color: $black;
+				text-align : center;
+				h5 {
+					text-align : center;
+					margin: 0;
+				}
+			}	
+	}
+}
+.prints {background-color: $blue;}
+.collage {background-color: $yellow;}
+.neon {
+	background-color: $black;
+	a {
+		font-weight: 900;
+		color: $white;
+		text-shadow: 1px 1px 1px rgba(0.004,0.004,0.004,0);
+		text-decoration: none;
+		&:hover {
+		background-color: $white;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+		}	
+	}
+}
+.sewings {background-color: $red;}
+.install {background-color: $pink;}
+.big {
+	font-weight: 600;
+	font-size: 10em;
+	color: $black;
+}
+
+@media only screen and (max-width: 406px) {
+	//$grids: add-grid($break);
+
+	header, {background-color: $white}
+	h1 {
+		color: $black;
+		font-size: 18px;
+		padding-left: 0; margin-left: -2em;
+		text-align: center;
+	}
+	#footer-nav {display: none;}
+	#wrapper {width: 100%}
+	nav ul {
+		width: 100%;
+		text-align: center;
+		//margin-left: -4em; padding: 0;
+		li {
+			width: 200%;
+		}
+	}
+}
+// section {display: table-row}
+// figure {padding-bottom: 30px;}
+// section + figure {clear: both;}
+// figcaption a {@include link-colors(#05c, #05c, #05c, #05c, #05c);}
+// .prose {
+// 	@include isolation-span(6, 2, both);
+// 	text-align: left;
+// 	line-height: 1.2em;
+// }
+// .poem {
+// 	@include isolation-span(5, 3, both);
+// 	text-align: left;
+// 	line-height: 1.2em;
+// }
+// .poem p:last-of-type {padding-bottom: 30px;}
+// h1, h2.title {
+// 	 font-family: $heading-font-family;
+// 	 padding-top: 0;
+// 	 color: $main-color;
+// 	 }
+// h2.title {padding-bottom: 10px;}
+// //p {font-size: 90%}
+// #logo h1 {
+// 	@include grid-span(3, 1);
+// 	line-height: .6em;
+// 	margin-left: 1em;
+// }
+// .tagline {
+// 	@include grid-span(4, 4);
+// 	font-weight: bold; 
+// 	font-family: $sans;
+// 	h3 {padding-top: .2em; padding-left: 24px;}
+// }
+// .fb {color: $fb;}
+// .btn {
+// 	@include grid-span(1, 8);
+// 	@include box-emboss(0.8, 0.05);
+// 	@include letterpress(0.9);
+// 	@include border-radius;
+// 	background-color: #eec07d;
+// 	color: $main-color;
+// 	font-weight: bold;
+// 	text-align: center;
+// 	margin: 1.4em 2em 0 0;
+// 	padding-top: .2em;
+// }
+// .clearfix {@include clearfix;}
+// .space {color : white}
+
+// ///// print styles /////
+
+// @media print {
+// 	* {color: #000;}
+// 	#date {margin-top: 80px;}
+// 	//img {width: 80%; height: 80%;}
+// 	.container {width: 80%;}
+// 	header, nav, #date a, .pager, #footer, #footer-nav {display: none;}
+// 	figure, .poem {page-break-inside: avoid;}
+// 	p {page-break-inside: never;}
+// 	.poem {@include isolation-span(6, 2, both);}
+// 	.poem +.poem{page-break-before: always;}
+// 	figcaption {margin-top: 8px;}
