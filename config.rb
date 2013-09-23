@@ -1,4 +1,5 @@
 require 'singularitygs'
+require 'toolkit'
 # Require any additional compass plugins here.
 
 
