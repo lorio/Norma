@@ -299,7 +299,7 @@ img, video {
   height: auto;
 }
 
-/* line 30, ../sass/partials/_base.scss */
+/* line 32, ../sass/partials/_base.scss */
 p, li {
   font-size: 16px;
 }
@@ -342,21 +342,48 @@ html body header {
   border-bottom: #d92328 dotted 1px;
   color: #f9f9f9;
 }
-/* line 53, ../sass/style.scss */
+@media (max-width: 600px) {
+  /* line 45, ../sass/style.scss */
+  html body header {
+    background-color: #f9f9f9;
+    border-bottom: 0;
+  }
+}
+/* line 57, ../sass/style.scss */
 html body header h1 {
   padding-left: 3em;
   line-height: 1em;
 }
-/* line 54, ../sass/style.scss */
+@media (max-width: 600px) {
+  /* line 57, ../sass/style.scss */
+  html body header h1 {
+    color: #191918;
+    font-size: 1.5em;
+    text-align: center;
+    padding-left: 0;
+    background-color: #f9f9f9;
+  }
+  /* line 66, ../sass/style.scss */
+  html body header h1 a {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit;
+  }
+  /* line 6, ../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_unstyled-link.scss */
+  html body header h1 a:active, html body header h1 a:focus {
+    outline: none;
+  }
+}
+/* line 69, ../sass/style.scss */
 html body header a {
   color: #f9f9f9;
   text-decoration: none;
 }
-/* line 57, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 html body header a:hover {
   color: #c7c7c7;
 }
-/* line 62, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 html body #wrapper {
   overflow: hidden;
   width: 82.97872%;
@@ -370,7 +397,7 @@ html body #wrapper {
   background: #f9f9f9 repeat;
   color: #191918;
 }
-/* line 71, ../sass/style.scss */
+/* line 86, ../sass/style.scss */
 html body #wrapper .container {
   overflow: hidden;
   margin: 0 auto;
@@ -379,7 +406,7 @@ html body #wrapper .container {
   background: #f9f9f9 repeat;
   color: #191918;
 }
-/* line 78, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 html body #wrapper .container #subhead {
   width: 100%;
   text-align: center;
@@ -387,14 +414,20 @@ html body #wrapper .container #subhead {
   clear: both;
   padding-top: 3em;
 }
-/* line 84, ../sass/style.scss */
+@media (max-width: 600px) {
+  /* line 93, ../sass/style.scss */
+  html body #wrapper .container #subhead {
+    padding-top: 0;
+  }
+}
+/* line 102, ../sass/style.scss */
 html body #wrapper .container #subhead h1 {
   font-size: 4em;
   line-height: 1em;
   color: #191918;
   font-weight: 900;
 }
-/* line 92, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 html body #wrapper .container nav ul {
   margin-top: -3em;
   width: 31.91489%;
@@ -411,14 +444,30 @@ html body #wrapper .container nav ul li {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 97, ../sass/style.scss */
+@media (max-width: 600px) {
+  /* line 110, ../sass/style.scss */
+  html body #wrapper .container nav ul {
+    width: 82.97872%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 8.51064%;
+    clear: none;
+  }
+}
+/* line 119, ../sass/style.scss */
 html body #wrapper .container nav ul li {
   text-align: center;
   padding: 2.5em 0;
   margin: .2em 0;
   clear: both;
 }
-/* line 102, ../sass/style.scss */
+@media (max-width: 600px) {
+  /* line 119, ../sass/style.scss */
+  html body #wrapper .container nav ul li {
+    padding: 1.5em 0;
+  }
+}
+/* line 127, ../sass/style.scss */
 html body #wrapper .container nav ul li a {
   text-decoration: none;
   font-weight: 900;
@@ -426,7 +475,7 @@ html body #wrapper .container nav ul li a {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0);
   text-align: center;
 }
-/* line 108, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 html body #wrapper .container nav ul li a:hover {
   color: inherit;
   text-decoration: inherit;
@@ -436,27 +485,27 @@ html body #wrapper .container nav ul li a:hover {
 html body #wrapper .container nav ul li a:hover:active, html body #wrapper .container nav ul li a:hover:focus {
   outline: none;
 }
-/* line 113, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 html body #wrapper .container #subnav {
   width: 100%;
   text-align: center;
   position: relative;
   clear: both;
 }
-/* line 118, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 html body #wrapper .container #subnav h1 {
   font-size: 4em;
   line-height: 1em;
   color: #191918;
   font-weight: 900;
 }
-/* line 125, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 html body #wrapper .container img {
   box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0, inset rgba(0, 0, 0, 0.05) 0 1px 0;
   text-align: center;
   pointer-event: none;
 }
-/* line 130, ../sass/style.scss */
+/* line 155, ../sass/style.scss */
 html body #wrapper .container #footer-nav {
   clear: both;
   text-align: left;
@@ -469,7 +518,20 @@ html body #wrapper .container #footer-nav {
   bottom: 6em;
   position: fixed;
 }
-/* line 137, ../sass/style.scss */
+@media (max-width: 600px) {
+  /* line 155, ../sass/style.scss */
+  html body #wrapper .container #footer-nav {
+    width: 23.40426%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 34.04255%;
+    clear: none;
+    position: relative;
+    padding-top: 2.8em;
+    clear: both;
+  }
+}
+/* line 168, ../sass/style.scss */
 html body #wrapper .container #footer-nav ul {
   list-style: none;
 }
@@ -479,18 +541,18 @@ html body #wrapper .container #footer-nav ul li {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 139, ../sass/style.scss */
+/* line 170, ../sass/style.scss */
 html body #wrapper .container #footer-nav ul li a {
   font-weight: 300;
   color: #191918;
   line-height: 1.2em;
   text-decoration: none;
 }
-/* line 144, ../sass/style.scss */
+/* line 175, ../sass/style.scss */
 html body #wrapper .container #footer-nav ul li a:hover {
   color: #d92328;
 }
-/* line 152, ../sass/style.scss */
+/* line 183, ../sass/style.scss */
 html body #footer {
   width: 100%;
   position: relative;
@@ -501,90 +563,37 @@ html body #footer {
   color: #191918;
   text-align: center;
 }
-/* line 162, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
 html body #footer h5 {
   text-align: center;
   margin: 0;
 }
 
-/* line 169, ../sass/style.scss */
+/* line 200, ../sass/style.scss */
 .prints {
   background-color: #11a4da;
 }
 
-/* line 170, ../sass/style.scss */
+/* line 201, ../sass/style.scss */
 .collage {
   background-color: #feda30;
 }
 
-/* line 171, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
 .neon {
   background-color: #191918;
 }
-/* line 173, ../sass/style.scss */
+/* line 204, ../sass/style.scss */
 .neon:hover {
   background-color: #313131;
 }
-/* line 175, ../sass/style.scss */
-.neon:hover a {
-  font-weight: 900;
-  color: #f9f9f9;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0);
-  text-decoration: none;
-}
 
-/* line 183, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 .sewings {
   background-color: #d92328;
 }
 
-/* line 184, ../sass/style.scss */
+/* line 207, ../sass/style.scss */
 .install {
   background-color: #f3c8d6;
-}
-
-/* line 185, ../sass/style.scss */
-.big {
-  font-weight: 900;
-  font-size: 6em;
-  line-height: .2em;
-  padding: 0;
-  margin: 0;
-  color: #191918;
-}
-
-@media only screen and (max-width: 406px) {
-  /* line 196, ../sass/style.scss */
-  header {
-    background-color: #f9f9f9;
-  }
-
-  /* line 197, ../sass/style.scss */
-  h1 {
-    color: #191918;
-    font-size: 18px;
-    padding-left: 0;
-    margin-left: -2em;
-    text-align: center;
-  }
-
-  /* line 203, ../sass/style.scss */
-  #footer-nav {
-    display: none;
-  }
-
-  /* line 204, ../sass/style.scss */
-  #wrapper {
-    width: 100%;
-  }
-
-  /* line 205, ../sass/style.scss */
-  nav ul {
-    width: 100%;
-    text-align: center;
-  }
-  /* line 209, ../sass/style.scss */
-  nav ul li {
-    width: 200%;
-  }
 }
