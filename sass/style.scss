@@ -14,6 +14,8 @@ $legacy-support-for-mozilla: false;
 //////////////////////////////
 @import "partials/normalize";
 @import "partials/base";
+@import "partials/typography";
+@import "partials/nav";
 
 $break: 406px;
 $grids: 12;
@@ -25,185 +27,229 @@ $gutters: 1/3;
 	padding: 0;
 	@include box-sizing(border-box);
 }
-p, li, a {
-	font-size: 1.2em; 
-	font-weight: 600;
-	-webkit-font-smoothing: antialiased;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-}
 html {
 	height: 100%;
-  -webkit-font-smoothing: antialiased;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	width: 100%;
+	background: $white 0 0;
 	body {
-		background: $white repeat;
+		margin-top: 0;
+		background: $white 0 0;
+		position: relative;
 		height: 100%;
+		min-height : 100%;
+		height: auto !important;
 		width: 100%;
 		font-family: $sans;
 		letter-spacing: .08em;
-		color : $black;
+		-webkit-font-smoothing: antialiased;
+		@include blacktype;
 		header {
 			width : 100%;
 			height : 60px;
 			//margin-top: -1.4em;
-			position: fixed;
+			position: absolute;
 			background-color: $black;
 			border-bottom: $red dotted 1px;
-			color: $white;
+			padding-bottom: 1em;
+			@include whitetype;
 			@include breakpoint($palm){
 				background-color: $white;
+				position: static;
+				height: 30px;
 				border-bottom: 0;
+				margin-bottom: 0;
+				//padding-bottom: 1px;
 			}
 			h1 {
 				padding-left: 3em; 
 				line-height: 1em;
 				@include breakpoint($palm){
-					color: $black;
+					@include blacktype;
 					font-size: 1.5em;
 					text-align: center;
 					padding-left: 0;
+					margin-bottom: 0;
 					background-color:$white;
 					a {@include unstyled-link;}
 					}
+				}
+				a {
+					@include whitetype;
+					text-decoration: none;
+					&:hover {
+					color: shade($white, 20%);
+					}	
+				}
 			}
-			a {
-				color: $white;
-				text-decoration: none;
-				&:hover {
-				color: shade($white, 20%);
-				}	
-			}
-		}
-		#wrapper {
-			@include clearfix;
-		  @include grid-span(10, 2);
-			height: auto !important;
-			min-height : 100%;
-			height: 100%;
-			//margin: 0 auto;
-			background: $white repeat;
-			color: $black;	
-			.container {
+			#root {
 				@include clearfix;
-				margin: 0 auto ;
-				width: 100%;
-				height: 100%;	
+			  @include grid-span(10, 2);
+				height: auto !important;
+				min-height : 100%;
+				height: 100%;
+				//margin-bottom: -4;
 				background: $white repeat;
-				color: $black;
-				#subhead {
+				@include blacktype;	
+				.container {
+					@include clearfix;
+					margin: 0 auto;
 					width: 100%;
-					text-align: center;
-					position: relative;
-					clear: both;
-					padding-top: 3em;
-					@include breakpoint($palm){
-						padding-top: 0;
-					}
-					h1 {
-						font-size: 4em;
-						line-height:1em; 
-						color: $black;
-						font-weight: 900;
-					}
-				}	
-				nav {
-					ul {
-						margin-top: -3em;
-						@include grid-span(4, 5);
-						@include no-bullets;
-						color: $white;
+					height: 100%;	
+					background: $white repeat;
+					//@include blacktype;
+					#l-side {
+						clear: both;
+						position: absolute;
+						text-align: left;
+						top: 1em;
+						@include grid-span(2,1);
 						@include breakpoint($palm){
-							@include grid-span(10,2)
-						}
-
-						li {
-							text-align: center;
-							padding: 2.5em 0;
-							margin: .2em 0;
-							clear: both;
-							@include breakpoint($palm){
-								padding: 1.5em 0;
+							display: none;
 							}
-							a {
-								text-decoration: none;
-								font-weight: 900;
-								color: $white;
-								text-shadow: 1px 1px 1px rgba(0.004,0.004,0.004,0);
-								text-align: center;
-								&:hover {@include unstyled-link;}									
-								}
+					}					
+					#r-side {
+						position: absolute;
+						top: 2em;
+						text-align: right;
+						@include grid-span(2,9);
+						@include breakpoint($palm){
+							display: none;
 							}
-						}		
-					}
-					#subnav {
+					}	
+					#subhead {
 						width: 100%;
 						text-align: center;
 						position: relative;
 						clear: both;
-						h1 {
-							font-size: 4em;
-							line-height:1em; 
-							color: $black;
-							font-weight: 900;
-						}
-					}
-					img {
-						@include box-emboss(0.8, 0.05);
-						text-align: center;
-						pointer-event: none;
-					}	
-					#footer-nav {
-						clear: both;
-						text-align: left;
-						color: $black;
-						@include grid-span(3,1);
-						bottom: 6em;
-						position: fixed;
-						@include breakpoint($palm){
-							@include grid-span(3,5);
-							position: relative;
-							padding-top: 2.8em;
-							clear: both;
-						}
-						ul {
-							@include no-bullets;
-							li a {
-								font-weight: 300;
-								color: $black;
-								line-height: 1.2em;
-								text-decoration: none;
-								&:hover {
-								color: $red;
-								}	
+						padding-top: 1em;
+						@include blacktype;
+						h2 {
+							padding-top: 2.5em;
+							@include breakpoint($palm){
+								padding-top: 0;
 							}
-						}
+						 }
+					}	
+					nav {
+						ul {
+							clear: both;
+							margin-top: -3em;
+							@include grid-span(4, 5);
+							@include no-bullets;
+							@include whitetype;
+							@include breakpoint($palm){
+								@include grid-span(10,2)
+							}
+							li {
+								text-align: center;
+								padding: 2.5em 0;
+								margin: .2em 0;
+								clear: both;
+								@include breakpoint($palm){
+									padding: 1.5em 0;
+								}
+								a {
+									text-decoration: none;
+									font-weight: 900;
+									@include whitetype;
+									text-shadow: 1px 1px 1px rgba(0.004,0.004,0.004,0);
+									text-align: center;
+									&:hover {@include unstyled-link;}									
+								}
+							}
+						}		
 					}
-				}	
-			}		
+					#nav-foot {
+						width: 100%;
+						text-align: center;
+						position: relative;
+						clear: both;
+						@include breakpoint($palm){
+							display: none;
+						}			
+					}
+					#gallery {
+						//@include grid-span(12,1);
+						position: relative;
+						width: 100%;
+						p {
+							padding-bottom: 1.5em;
+							padding-top: 2em;
+						}
+						.row {
+							width: 100%; 
+							clear: both;
+							padding-top: 2em;
+							//padding-bottom: 4em;
+							.l-col {
+								@include grid-span(4,1);
+							}
+							.c-col {
+								@include grid-span(4,5);
+							}
+							.r-col {
+								@include grid-span(4,9);	
+							}
+						}	
+					}
+				}
+			}			
 			#footer {
 				width: 100%;
-				position: relative;
+				//position: relative;
 				//margin-top: 1em;
-				padding: 0 0 1em 0;
+				//padding: 0 0 1em 0;
 				height: 4em;
 				clear: both;
 				background-color: $white;
-				color: $black;
+				@include blacktype;
 				text-align : center;
 				h5 {
 					text-align : center;
 					margin: 0;
+					@include blacktype;
 				}
 			}	
+		}
 	}
+
+.cap {
+	font-size: 4em;
+	line-height:2em;
+	margin:0;
+	font-weight: 900;
+	@include breakpoint($palm){
+		display: none;
+		}
 }
+.pipe {
+	font-size: 4em;
+	line-height:1em; 
+	@include blacktype;
+	font-weight: 900;
+}
+.monogram {
+	font-size: 14em;
+	line-height:1em; 
+	@include blacktype;
+	font-weight: 900;
+}
+
 .prints {background-color: $blue;}
 .collage {background-color: $yellow;}
 .neon {
 	background-color: $black;
 	&:hover {background-color: shade($white, 80%);}
 }
-.sewings {background-color: $red;}
+.sewings {
+	background-color: $red;
+	&:hover {background-color: tint($red, 20%);}
+}
+header.sewings {
+	@include breakpoint($palm){
+		background-color: $white;
+	}
+}
 .install {background-color: $pink;}
 
 

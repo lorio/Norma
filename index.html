@@ -6,41 +6,52 @@
 <head>
 	<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>home</title>
-  <meta name="description" content="">
+  <title>Norma Markley + Home</title>
+  <meta name="description" content="Queens artist Norma Markley's ouevre">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico"/>
   <link rel="stylesheet" href="stylesheets/style.css">
+  
+ <style>
+	/*@media screen only and (min-width: 1450px){
+		html body #footer {position: fixed;bottom: 0;}
+		body {margin-bottom: -4em;}
+		#wrapper {margin-top: 4em;}
+	}*/
+  </style>
+  
   <script src="javascripts/modernizr.js"></script>
+  <script src="javascripts/orientchange.js"></script>
 </head>
 <body>
 	<header>
 		<h1><a href="index.html">Norma Markley</a></h1>
 	</header>
-	<div id="wrapper">
-		<div class="container">
-			<div id="subhead">
-				<h1>+</h1>
-			</div>
+	<div id="root">
+		<div class="container home">
+			<div id="l-side" class="monogram"><p>N</p></div>
+			<div id="subhead" class="cap">+</div>
 			<nav>
 				<ul>
 					<li class="collage"><a href="#"><strong>Collage</strong></a></li>
 					<li class="neon"><a href="#"><strong>Neon</strong></a></li>
 					<li class="install"><a href="#"><strong>Installation</strong></a></li>
 					<li class="prints"><a href="#">Prints</a></li>
-					<li class="sewings"><a href="#">Sewings</a></li>
+					<li class="sewings"><a href="sewings.html">Sewings</a></li>
 				</ul>
 			</nav>
-			<div id="subnav"><h1>|</h1></div>
-			<div id="footer-nav">
+			<div id="nav-foot" class="pipe">|</div>
+			<div id="info-nav">
 				<ul>
-					<li><a href="#">Statement</a></li>
-					<li><a href="#">Resume</a></li>
+					<li><a href="#">About</a></li>
 					<li><a href="#">News</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="#">Resume</a></li>
 				</ul> 
-			</div>
+			</div> 
+			<div id="r-side" class="monogram">M</div>
 		</div><!-- end container -->
-	</div><!-- end wrapper -->
-	<div id="footer"><small>&copy;2013 normamarkley.com. Site under construction.</small></div>
+		<div class="root_footer"></div> 
+	</div><!-- end root -->
+	<div id="footer"><h5>&copy;2013 normamarkley.com. Site under construction. Contact Norma norma.markley[at]gmail.com</h5></div>
 </body>
 </html>

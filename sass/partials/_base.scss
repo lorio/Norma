@@ -22,12 +22,16 @@ $black: #191918;
 $blue: #11a4da;
 $pink: #f3c8d6;
 $red: #d92328;
-$sans: ‘Century Gothic’, AppleGothic, sans-serif;
+$sans: "Century Gothic", AppleGothic, sans-serif;
 $footer-height: 4em;
 $container-width: 100%;
 $base-font-size: 16px;
+$small: 12px;
 
 $palm: max-width 600px;
+$med: max-width 930px;
+$wide: 1450px;
+$tall: min-height 900px; 
 
 p, li {font-size: $base-font-size;}
 
@@ -44,24 +48,33 @@ p, li {font-size: $base-font-size;}
 @mixin letterpress($opacity){
     text-shadow:white($opacity) 0 1px 0;
 }
+@mixin whitetype(){
+	color: $white;
+	text-shadow: 1px 1px 1px rgba(0.004,0.004,0.004,0);	
+}
+@mixin blacktype{
+	color: $black;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
 @mixin center {
 	width: $container-width;
 	text-align: center;
 }
-@mixin cat {
-	text-align: center;
-	color: white;
-	text-decoration: none;
-	list-style: none;
-	&:hover {
-		color: $black;
-		background-color: $white;
-	}
-}
-@mixin cat-bg($cat) {
-	@if cat == prints {background-color: $blue;}
-	@else if cat == collage {background-color: $yellow;}
-	@else if cat == neon {background-color: $black;}
-	@else if cat == sewings {background-color: $red;}
-	@else {background-color: $pink;}
-}
+// @mixin cat {
+// 	text-align: center;
+// 	color: white;
+// 	text-decoration: none;
+// 	list-style: none;
+// 	&:hover {
+// 		color: $black;
+// 		background-color: $white;
+// 	}
+// }
+// @mixin cat-bg($cat) {
+// 	@if cat == prints {background-color: $blue;}
+// 	@else if cat == collage {background-color: $yellow;}
+// 	@else if cat == neon {background-color: $black;}
+// 	@else if cat == sewings {background-color: $red;}
+// 	@else {background-color: $pink;}
+// }

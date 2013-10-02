@@ -1,0 +1,33 @@
+p, li, a, {
+	font: {
+		family: $sans;
+		size: 1.2em; 
+		weight: 600;
+	}
+}
+small {
+	font: {
+		family: $sans;
+		size: 0.8em;
+		weight: 300;
+	}
+}
+h1, h2, h3 {
+	font-family: $sans;
+}
+
+figure {
+	display: inline-block;
+	width: 100%;
+	//padding: 2em;
+	img {
+		@include box-emboss(0.8, 0.05);
+	}
+	figcaption {
+		@extend small;
+		@include center;
+		margin-top: .5em; 
+		padding-bottom: 2.5em;
+		&:last-child {padding-bottom: 4em;}
+	}
+}
