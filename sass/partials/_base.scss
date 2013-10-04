@@ -7,6 +7,8 @@
 @import "compass/typography/links/unstyled-link";
 @import "compass/utilities/general/clearfix";
 @import "compass/typography/lists/bullets";
+@import "compass/layout/sticky-footer";
+
 $set-box-sizing: false;
 //$container-width: 990px;
 $grids: 12;
@@ -30,8 +32,8 @@ $small: 12px;
 
 $palm: max-width 600px;
 $med: max-width 930px;
-$wide: 1450px;
-$tall: min-height 900px; 
+$wide: 1680px;
+//$tall: min-height 900px; 
 
 p, li {font-size: $base-font-size;}
 
@@ -61,20 +63,3 @@ p, li {font-size: $base-font-size;}
 	width: $container-width;
 	text-align: center;
 }
-// @mixin cat {
-// 	text-align: center;
-// 	color: white;
-// 	text-decoration: none;
-// 	list-style: none;
-// 	&:hover {
-// 		color: $black;
-// 		background-color: $white;
-// 	}
-// }
-// @mixin cat-bg($cat) {
-// 	@if cat == prints {background-color: $blue;}
-// 	@else if cat == collage {background-color: $yellow;}
-// 	@else if cat == neon {background-color: $black;}
-// 	@else if cat == sewings {background-color: $red;}
-// 	@else {background-color: $pink;}
-// }

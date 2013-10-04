@@ -1,4 +1,11 @@
 .home {
+	h1 { display: block; padding-left: 1.9em;
+		@include breakpoint($palm){
+			position: static;
+			padding-left: 0;
+			text-align: center;
+    }
+	}
 	#info-nav {
 		clear: both;
 		text-align: left;
@@ -7,29 +14,64 @@
 		position: absolute;
 		
 		@include breakpoint($palm){
-			@include grid-span(11,1);
-			position: relative;
-			padding-top: 1px;
-			clear: both;
-			&:nth-child(n+3){display: none;}	
+			width: 100%;
+			clear: both !important;
+			float: none;
+			@include center; 
 		}
-		@include breakpoint($tall){
+		@include breakpoint($wide){
 			position: absolute;
-			bottom: 10em;
+			bottom: 12em;
 		}
 		@include breakpoint($med){
-			position: absolute;
-			bottom: 6em;
+			position: static;
+			//bottom: 6em;
 		}
 		ul {
 			@include no-bullets;
+			li {
+				@include breakpoint($palm){	
+				position: static;
+				display: inline;
+				@include center;
+				padding-top: 1px;
+				&:first-of-type {padding-right: 3em;}
+				&:nth-child(n+3){display: none;}	
+				}
+			} 
 			li a {
-				font-weight: 300;
+				font-weight: 600;
 				@include blacktype;
-				line-height: 1.2em;
+				line-height: 1.3em;
 				text-decoration: none;
 				&:hover {color: $red;}
-				}
-			}
+			}		
+		}
+	}
+
+	.cap {
+		font-size: 4em;
+		line-height:2em;
+		margin:0;
+		font-weight: 900;
+		@include breakpoint($palm){
+			display: none;
+		}
+	}
+	.pipe {
+		font-size: 4em;
+		line-height:1em; 
+		padding-bottom: .2em;
+		@include blacktype;
+		font-weight: 900;
+		@include breakpoint($wide){
+			padding-bottom: 2em;
+		}
+	}
+	.monogram {
+		font-size: 14em;
+		line-height:1em; 
+		@include blacktype;
+		font-weight: 900;
 	}
 }				
