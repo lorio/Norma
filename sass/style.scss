@@ -77,9 +77,9 @@ html {
 					}
 				}
 				h1 {
-					left: 2.5em;
+					left: 1.9em;
 					position: absolute;
-					top: -.9em;
+					top: -.26em;
 					@include breakpoint($palm){
 						display: block;
 						//padding-left: 1em;
@@ -115,7 +115,8 @@ html {
 					clear: both;
 					position: absolute;
 					text-align: left;
-					top: 1em;
+					//font-size: 12em;
+					top: 9.5em;
 					@include grid-span(2,1);
 					@include breakpoint($palm){
 						display: none;
@@ -123,7 +124,7 @@ html {
 				}					
 				#r-side {
 					position: absolute;
-					top: 2em;
+					top: 35.5em;
 					text-align: right;
 					@include grid-span(2,9);
 					@include breakpoint($palm){
@@ -150,7 +151,7 @@ html {
 				nav {
 					ul {
 						clear: both;
-						margin-top: -3em;
+						margin-top: -3.15em;
 						@include grid-span(4, 5);
 						@include no-bullets;
 						@include whitetype;
@@ -187,17 +188,54 @@ html {
 					}			
 				}
 				#gallery {
+					@include clearfix;
 					position: relative;
 					width: 100%;
 					p {
 						padding-bottom: 1.5em;
-						padding-top: 2em;
+						padding-top: .5em;
+						@include breakpoint($palm){
+							padding: 0;
+							}
+					}
+					img {pointer-events: none;}
+					#letters  {
+						//padding-top: .8em;
+						letter-spacing: normal;
+						font-size: 8em;
+						@include breakpoint($med){
+							font-size: 4em;
+						}
+						@include breakpoint($palm){
+							float: none;
+							width: 100%;
+							font-size: 1em;
+							padding: 0;
+							}
+						p {padding-bottom: 1em;}
+						.monogram {
+							@include breakpoint($palm){
+							font-size:2.2em;
+							padding: 0;
+							}
+						}
 					}
 					.row {
+						@include clearfix;
 						width: 100%; 
 						clear: both;
 						padding-top: 2em;
 						//padding-bottom: 4em;
+						.single {
+							@include grid-span(12,1);
+							@include vertical-center;
+							@include center;
+							@include breakpoint($palm){
+								float: none;
+								width: 100%;
+								margin: 0 auto;
+							}
+						}
 						.l-col {
 							@include grid-span(4,1);
 							@include breakpoint($palm){
@@ -239,9 +277,19 @@ html {
 	}
 }
 
-.prints {background-color: $blue;}
-.collage {background-color: $yellow;}
-.neon {
+.cat1 {
+	background-color: $blue;
+	&:hover {
+		background-color: tint($blue, 20%);
+	}
+}
+.cat4 {
+	background-color: $yellow;
+	&:hover {
+		background-color: tint($yellow, 20%);
+	}
+}
+.cat2 {
 	background-color: $black;
 	&:hover {background-color: shade($white, 80%);}
 }
@@ -254,7 +302,14 @@ header.cat5 {
 		background-color: $white;
 	}
 }
-.install {background-color: $pink;}
-
-
+.cat3 {
+	background-color: $pink;
+	&:hover {
+		background-color: tint($pink, 20%);
+	}
+}
+body.dark, html body #root.dark, html body #footer.dark, html body #footer h5.dark {
+	background-color: $black !important;
+	@include whitetype;
+}
 

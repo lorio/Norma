@@ -1,5 +1,7 @@
 .home {
-	h1 { display: block; padding-left: 1.9em;
+	h1 { 
+		display: block; 
+		padding-left: 1.9em;
 		@include breakpoint($palm){
 			position: static;
 			padding-left: 0;
@@ -17,6 +19,7 @@
 			width: 100%;
 			clear: both !important;
 			float: none;
+			position: static;
 			@include center; 
 		}
 		@include breakpoint($wide){
@@ -24,8 +27,8 @@
 			bottom: 12em;
 		}
 		@include breakpoint($med){
-			position: static;
-			//bottom: 6em;
+			position: absolute;
+			bottom: 9.3em;
 		}
 		ul {
 			@include no-bullets;
@@ -69,9 +72,9 @@
 		}
 	}
 	.monogram {
-		font-size: 14em;
+		font-size: 16em;
 		line-height:1em; 
 		@include blacktype;
 		font-weight: 900;
 	}
-}				
+}
