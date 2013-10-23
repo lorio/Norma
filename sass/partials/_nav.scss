@@ -1,7 +1,9 @@
 .home {
 	h1 { 
-		display: block; 
+		display: block;
+		line-height: 1em; 
 		padding-left: 1.9em;
+		font-weight: $bold;
 		@include breakpoint($palm){
 			position: static;
 			padding-left: 0;
@@ -43,7 +45,7 @@
 				}
 			} 
 			li a {
-				font-weight: 600;
+				//font-weight: 600;
 				@include blacktype;
 				line-height: 1.3em;
 				text-decoration: none;
@@ -56,17 +58,18 @@
 		font-size: 4em;
 		line-height:2em;
 		margin:0;
-		font-weight: 900;
+		font-weight: $bolder;
 		@include breakpoint($palm){
 			display: none;
 		}
 	}
 	.pipe {
 		font-size: 4em;
-		line-height:1em; 
-		padding-bottom: .2em;
+		line-height:.7em; 
+		//padding-bottom: .2em;
 		@include blacktype;
-		font-weight: 900;
+		font-weight: $bolder;
+		z-index: 1;
 		@include breakpoint($wide){
 			padding-bottom: 2em;
 		}
@@ -75,6 +78,6 @@
 		font-size: 16em;
 		line-height:1em; 
 		@include blacktype;
-		font-weight: 900;
+		font-weight: $bolder;
 	}
 }

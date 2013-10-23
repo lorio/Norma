@@ -15,7 +15,7 @@ $grids: 12;
 $gutters: 1/3;
 $background-grid-color: #eee;
 $experimental-support-for-svg: true;
-$experimental-support-for-pie: false;
+$experimental-support-for-pie: true;
 $border-radius:(5px);
 $white: #F9F9F9;
 $white-white:#fff;
@@ -24,11 +24,24 @@ $black: #191918;
 $blue: #11a4da;
 $pink: #f3c8d6;
 $red: #d92328;
-$sans: "Century Gothic", AppleGothic, sans-serif;
+
 $footer-height: 4em;
 $container-width: 100%;
-$base-font-size: 16px;
+
 $small: 12px;
+
+$light: 300;
+$book: 400;
+$regular: 500;
+$bold: 700;
+$bolder: 800;
+
+// Base Font
+$base-font-family: "futura-pt", sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 16px;
+$base-line-height: 1.4;
+
 
 $palm: max-width 600px;
 $med: 641px 1025px;
@@ -52,11 +65,11 @@ p, li {font-size: $base-font-size;}
 }
 @mixin whitetype(){
 	color: $white;
-	text-shadow: 1px 1px 1px rgba(0.004,0.004,0.004,0);	
+	//text-shadow: 1px 1px 1px rgba(0.004,0.004,0.004,0);	
 }
 @mixin blacktype{
 	color: $black;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	//text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
 @mixin center {

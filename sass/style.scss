@@ -22,7 +22,6 @@ $grids: 12;
 $gutters: 1/3;
 
 @include sticky-footer(4em);
-
 * {
 	margin: 0;
 	padding: 0;
@@ -34,14 +33,14 @@ html {
 	background: $white 0 0;
 	body {
 		background: $white 0 0;
-		font-family: $sans;
-		letter-spacing: .08em;
-		-webkit-font-smoothing: antialiased;
-		@include blacktype;
+		font-family: $base-font-family;
+		letter-spacing: .09em;
+		//-webkit-font-smoothing: antialiased;
+		//@include blacktype;
 		header {
 			width : 100%;
 			height : 60px;
-			//margin-top: -1.4em;
+			font-weight: $bold;
 			position: absolute;
 			background-color: $black;
 			border-bottom: $red dotted 1px;
@@ -64,7 +63,7 @@ html {
 				}
 			}
 			a {
-				display: inline;
+				//display: inline;
 				@include whitetype;
 				text-decoration: none;
 				@include breakpoint($palm){
@@ -88,8 +87,7 @@ html {
 					}	
 				}
 			h1 {
-				display: inline;
-				line-height: 1em;
+				//line-height: .8em;
 				@include breakpoint($palm){
 					@include blacktype;
 					font-size: 1.5em;
@@ -118,15 +116,18 @@ html {
 					//font-size: 12em;
 					top: 9.5em;
 					@include grid-span(2,1);
+					z-index: 1000;
 					@include breakpoint($palm){
 						display: none;
 						}
 				}					
 				#r-side {
+					font-family: $base-font-family;
 					position: absolute;
 					top: 35.5em;
 					text-align: right;
 					@include grid-span(2,9);
+					clear: left;
 					@include breakpoint($palm){
 						display: none;
 						}
@@ -137,6 +138,9 @@ html {
 					position: relative;
 					clear: both;
 					padding-top: 1em;
+					padding-left: .15em;
+					margin-bottom: 3px;
+					//border-bottom: 2px solid $white;
 					@include blacktype;
 					h2 {
 						padding-top: 2.5em;
@@ -150,20 +154,24 @@ html {
 				}	
 				nav {
 					ul {
-						clear: both;
-						margin-top: -3.15em;
+						margin-top: -3.2em;
+						margin-bottom: 0;
 						@include grid-span(4, 5);
 						@include no-bullets;
 						@include whitetype;
+						clear: both;
 						@include breakpoint($palm){
 							@include grid-span(10,2);
 							margin-top: 0;
+							margin-bottom: 5px;
 						}
 						li {
+							position: relative;
 							text-align: center;
 							padding: 2.5em 0;
 							margin: .2em 0;
 							clear: both;
+							z-index: 1000;
 							@include breakpoint($palm){
 								padding: 1.5em 0;
 							}
@@ -182,7 +190,12 @@ html {
 					width: 100%;
 					text-align: center;
 					position: relative;
-					clear: both;
+					clear: left;
+					padding-top: 5px;
+					padding-left: .2em;
+					//border-top: 2px solid $white;
+					z-index: 0;
+					@include box-sizing(border-box);
 					@include breakpoint($palm){
 						display: none;
 					}			
@@ -200,9 +213,11 @@ html {
 					}
 					img {pointer-events: none;}
 					#letters  {
-						//padding-top: .8em;
+						font-family: $base-font-family;
 						letter-spacing: normal;
+						@include blacktype;
 						font-size: 8em;
+						font-weight: $bold;
 						@include breakpoint($med){
 							font-size: 4em;
 						}

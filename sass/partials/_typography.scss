@@ -1,19 +1,23 @@
 p, li, a, {
 	font: {
-		family: $sans;
+		family: $base-font-family;
 		size: 1.2em; 
-		weight: 600;
+	//	weight: $regular;
 	}
 }
 small {
 	font: {
-		family: $sans;
+		family: $base-font-family;
 		size: 0.8em;
-		weight: 300;
+		weight: $light;
 	}
 }
 h1, h2, h3 {
-	font-family: $sans;
+	font: {
+		family: "futura-pt-n7",$base-font-family;
+		size: 2rem; 
+		weight: $bold;
+	}
 }
 //h5.home {line-height: 5em;}
 
