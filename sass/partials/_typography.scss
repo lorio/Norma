@@ -12,12 +12,17 @@ small {
 		weight: $light;
 	}
 }
-h1, h2, h3 {
+h1, h2 {
 	font: {
 		family: "futura-pt-n7",$base-font-family;
 		size: 2rem; 
 		weight: $bold;
 	}
+	// h3 {
+	// 	family: "futura-pt-n7",$base-font-family;
+	// 	size: 1.8rem; 
+	// 	weight: $bold;
+	// }
 }
 //h5.home {line-height: 5em;}
 

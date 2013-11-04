@@ -1,7 +1,7 @@
 .home {
 	h1 { 
 		display: block;
-		line-height: 1em; 
+		line-height: 0.8em; 
 		padding-left: 1.9em;
 		font-weight: $bold;
 		@include breakpoint($palm){
@@ -30,7 +30,7 @@
 		}
 		@include breakpoint($med){
 			position: absolute;
-			bottom: 9.3em;
+			bottom: 7.3em;
 		}
 		ul {
 			@include no-bullets;
