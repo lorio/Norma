@@ -5,9 +5,28 @@ p, li, a, {
 	//	weight: $regular;
 	}
 }
+article p {
+	font: {
+		family: 'pt-sans',sans-serif;
+		size: 1em;
+	}
+	color: shade($white, 70%);
+	strong {font-weight: $bold};
+}
+article a {
+	@include link-colors(shade($white, 70%),tint($red, 20%),$red,shade($white, 70%),tint($red, 20%));
+	font: {
+		family: 'pt-sans',sans-serif;
+		size: 1em;
+	}
+	text-decoration: none;
+	border-bottom: 1px dotted $red;
+	background-color: white;
+	color: $black;
+}
 small {
 	font: {
-		family: $base-font-family;
+		family: 'pt-sans',sans-serif;
 		size: 0.8em;
 		weight: $light;
 	}

@@ -11,10 +11,11 @@
     }
 	}
 	#info-nav {
-		clear: both;
+		clear: none;
 		text-align: left;
 		@include grid-span(3,1);
-		bottom: 10em;
+		top: 44em;
+		margin-left: 1em;
 		position: absolute;
 		
 		@include breakpoint($palm){

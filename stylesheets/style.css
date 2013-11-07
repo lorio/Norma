@@ -310,36 +310,74 @@ p, li, a {
 }
 
 /* line 8, ../sass/partials/_typography.scss */
+article p {
+  font-family: 'pt-sans',sans-serif;
+  font-size: 1em;
+  color: #4a4a4a;
+}
+/* line 14, ../sass/partials/_typography.scss */
+article p strong {
+  font-weight: 700;
+}
+
+/* line 16, ../sass/partials/_typography.scss */
+article a {
+  color: #4a4a4a;
+  font-family: 'pt-sans',sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  border-bottom: 1px dotted #d92328;
+  background-color: white;
+  color: #191918;
+}
+/* line 18, ../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+article a:visited {
+  color: #4a4a4a;
+}
+/* line 21, ../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+article a:focus {
+  color: #e04f53;
+}
+/* line 24, ../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+article a:hover {
+  color: #e04f53;
+}
+/* line 27, ../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+article a:active {
+  color: #d92328;
+}
+
+/* line 27, ../sass/partials/_typography.scss */
 small, figure figcaption {
-  font-family: "futura-pt", futura, sans-serif;
+  font-family: 'pt-sans',sans-serif;
   font-size: 0.8em;
   font-weight: 300;
 }
 
-/* line 15, ../sass/partials/_typography.scss */
+/* line 34, ../sass/partials/_typography.scss */
 h1, h2 {
   font-family: "futura-pt-n7", "futura-pt", futura, sans-serif;
   font-size: 2rem;
   font-weight: 700;
 }
 
-/* line 29, ../sass/partials/_typography.scss */
+/* line 48, ../sass/partials/_typography.scss */
 figure {
   display: inline-block;
   width: 100%;
 }
-/* line 33, ../sass/partials/_typography.scss */
+/* line 52, ../sass/partials/_typography.scss */
 figure img {
   box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0, inset rgba(0, 0, 0, 0.05) 0 1px 0;
 }
-/* line 36, ../sass/partials/_typography.scss */
+/* line 55, ../sass/partials/_typography.scss */
 figure figcaption {
   width: 100%;
   text-align: center;
   margin-top: .5em;
   padding-bottom: 2.5em;
 }
-/* line 41, ../sass/partials/_typography.scss */
+/* line 60, ../sass/partials/_typography.scss */
 figure figcaption:last-child {
   padding-bottom: 4em;
 }
@@ -361,14 +399,15 @@ figure figcaption:last-child {
 }
 /* line 13, ../sass/partials/_nav.scss */
 .home #info-nav {
-  clear: both;
+  clear: none;
   text-align: left;
   width: 23.40426%;
   float: left;
   margin-right: -100%;
   margin-left: 0%;
   clear: none;
-  bottom: 10em;
+  top: 44em;
+  margin-left: 1em;
   position: absolute;
 }
 @media (max-width: 600px) {
@@ -396,7 +435,7 @@ figure figcaption:last-child {
     bottom: 7.3em;
   }
 }
-/* line 35, ../sass/partials/_nav.scss */
+/* line 36, ../sass/partials/_nav.scss */
 .home #info-nav ul {
   list-style: none;
 }
@@ -407,7 +446,7 @@ figure figcaption:last-child {
   margin-left: 0;
 }
 @media (max-width: 600px) {
-  /* line 37, ../sass/partials/_nav.scss */
+  /* line 38, ../sass/partials/_nav.scss */
   .home #info-nav ul li {
     position: static;
     display: inline;
@@ -415,26 +454,26 @@ figure figcaption:last-child {
     text-align: center;
     padding-top: 1px;
   }
-  /* line 43, ../sass/partials/_nav.scss */
+  /* line 44, ../sass/partials/_nav.scss */
   .home #info-nav ul li:first-of-type {
     padding-right: 3em;
   }
-  /* line 44, ../sass/partials/_nav.scss */
+  /* line 45, ../sass/partials/_nav.scss */
   .home #info-nav ul li:nth-child(n+3) {
     display: none;
   }
 }
-/* line 47, ../sass/partials/_nav.scss */
+/* line 48, ../sass/partials/_nav.scss */
 .home #info-nav ul li a {
   color: #191918;
   line-height: 1.3em;
   text-decoration: none;
 }
-/* line 52, ../sass/partials/_nav.scss */
+/* line 53, ../sass/partials/_nav.scss */
 .home #info-nav ul li a:hover {
   color: #d92328;
 }
-/* line 57, ../sass/partials/_nav.scss */
+/* line 58, ../sass/partials/_nav.scss */
 .home .cap {
   font-size: 4em;
   line-height: 2em;
@@ -442,12 +481,12 @@ figure figcaption:last-child {
   font-weight: 800;
 }
 @media (max-width: 600px) {
-  /* line 57, ../sass/partials/_nav.scss */
+  /* line 58, ../sass/partials/_nav.scss */
   .home .cap {
     display: none;
   }
 }
-/* line 66, ../sass/partials/_nav.scss */
+/* line 67, ../sass/partials/_nav.scss */
 .home .pipe {
   font-size: 4em;
   line-height: .7em;
@@ -456,12 +495,12 @@ figure figcaption:last-child {
   z-index: 1;
 }
 @media (min-width: 1680px) {
-  /* line 66, ../sass/partials/_nav.scss */
+  /* line 67, ../sass/partials/_nav.scss */
   .home .pipe {
     padding-bottom: 2em;
   }
 }
-/* line 77, ../sass/partials/_nav.scss */
+/* line 78, ../sass/partials/_nav.scss */
 .home .monogram {
   font-size: 16em;
   line-height: 1em;
@@ -485,9 +524,8 @@ article {
 article p {
   text-align: left;
   padding: .6em 0;
-  font-weight: 400;
   letter-spacing: 0.004em;
-  line-height: 1.4;
+  line-height: 1.5em;
 }
 /* line 13, ../sass/partials/_articles.scss */
 article p:last-of-type {
@@ -501,22 +539,23 @@ article p:last-of-type {
     margin: 0 auto;
   }
 }
-/* line 21, ../sass/partials/_articles.scss */
+/* line 20, ../sass/partials/_articles.scss */
 article img {
   box-shadow: rgba(255, 255, 255, 0.9) 0 1px 0, inset rgba(0, 0, 0, 0.03) 0 1px 0;
   width: 100%;
   text-align: center;
   margin: 1.6em 0;
 }
-/* line 26, ../sass/partials/_articles.scss */
+/* line 25, ../sass/partials/_articles.scss */
 article .article-title {
   text-align: left;
   font-size: 1.7rem;
+  letter-spacing: 0.003em;
   padding: 0;
   font-weight: 500;
 }
 /* line 32, ../sass/partials/_articles.scss */
-article h3 {
+article h3, article small, article figure figcaption, figure article figcaption {
   margin: .1em 0;
 }
 /* line 33, ../sass/partials/_articles.scss */
