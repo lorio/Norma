@@ -40,7 +40,7 @@ html {
 		//@include blacktype;
 		header {
 			width : 100%;
-			height : 60px;
+			height :60px;
 			font-weight: $bold;
 			position: absolute;
 			background-color: $black;
@@ -49,10 +49,11 @@ html {
 			@include whitetype;
 			@include breakpoint($palm){
 				background-color: $white;
+				text-align: center;
 				position: static;
-				height: 30px;
-				border-bottom: 0;
 				margin-bottom: 0;
+				border-bottom: $red dotted 1px;
+				height: 50px;
 				}			
 			img {
 				width: 54px; 
@@ -73,7 +74,9 @@ html {
 					//display: block;
 					//padding-left: 1em;
 					background-color:$white;
-					&:hover {@include unstyled-link;
+					&:hover {
+						@include unstyled-link;
+						background-color:$white;
 					}
 				}
 				h1 {
@@ -82,11 +85,14 @@ html {
 					top: -.26em;
 					@include breakpoint($palm){
 						display: block;
-						//padding-left: 1em;
+						left: 0;
+						background-color: white;
 						text-align: center;
-						}
+						@include grid-span(12, 1);
+						&:hover {background-color:$white;}
 					}	
 				}
+			}
 			h1 {
 				//line-height: .8em;
 				@include breakpoint($palm){
@@ -229,6 +235,7 @@ html {
 							padding: 0;
 							}
 						p {padding-bottom: 1em;}
+						a {@include unstyled-link}
 						.monogram {
 							@include breakpoint($palm){
 							font-size:2.2em;
@@ -276,6 +283,15 @@ html {
 								margin: 0 auto;
 							}	
 						}
+						.lw-col {
+							@include grid-span(8,1);
+							@include breakpoint($palm){
+								float: none;
+								width: 100%;
+								margin: 0 auto;
+							}	
+						}
+						
 					}	
 				}
 			}
@@ -309,6 +325,12 @@ html {
 	background-color: $black;
 	&:hover {background-color: shade($white, 80%);}
 }
+header.cat2 {
+	@include breakpoint($palm){
+		background-color: $white;
+		&:hover {background-color: $white;}
+	}
+}
 .cat5 {
 	background-color: $red;
 	&:hover {background-color: tint($red, 20%);}
@@ -328,4 +350,20 @@ body.dark, html body #root.dark, html body #footer.dark, html body #footer h5.da
 	background-color: $black !important;
 	@include whitetype;
 }
-
+ul.pager {
+	text-align: center;
+	li {display: inline; float: left; width: 50%;
+		a {
+			display: inline-block;
+			text-decoration: none;	
+			color: $white;
+			&:hover {color: $red}
+			.next {float: right;text-align:right;}
+			.prev {float: left;}
+			.disabled {
+				color: $black;
+				&:hover {color: $black;}
+			}
+		}
+	}
+}

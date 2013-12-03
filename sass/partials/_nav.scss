@@ -23,7 +23,8 @@
 			clear: both !important;
 			float: none;
 			position: static;
-			@include center; 
+			@include center;
+			margin-left: 0; 
 		}
 		@include breakpoint($wide){
 			position: absolute;
