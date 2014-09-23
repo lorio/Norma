@@ -248,7 +248,11 @@ html {
 						width: 100%; 
 						clear: both;
 						padding-top: 2em;
-						//padding-bottom: 4em;
+						p {
+						@include breakpoint($palm){
+							padding: .6em 0;
+							}
+						}
 						.single {
 							@include grid-span(12,1);
 							@include vertical-center;

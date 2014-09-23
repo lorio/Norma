@@ -73,7 +73,7 @@ figure {
 
 [class^="icon-"], [class*=" icon-"] {
 	font-family: 'icomoon';
-	// speak: none;
+	speak: none;
 	// font-style: normal;
 	// font-weight: normal;
 	// font-variant: normal;
@@ -85,20 +85,20 @@ figure {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-@font-face {
-	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot');
-	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('fonts/icomoon.ttf') format('truetype'),
-		url('fonts/icomoon.woff') format('woff'),
-		url('fonts/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: 'icomoon';
+// 	src:url('fonts/icomoon.eot');
+// 	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+// 		url('fonts/icomoon.ttf') format('truetype'),
+// 		url('fonts/icomoon.woff') format('woff'),
+// 		url('fonts/icomoon.svg#icomoon') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
 
-[class^="icon-"], [class*=" icon-"] {
+//[class^="icon-"], [class*=" icon-"] {
 	// font-family: 'icomoon';
-	// speak: none;
+	//speak: none;
 	// font-style: normal;
 	// font-weight: normal;
 	// font-variant: normal;
@@ -108,9 +108,9 @@ figure {
  //  color: $white;
  //  background-color: $black;
 	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
+	//-webkit-font-smoothing: antialiased;
+	//-moz-osx-font-smoothing: grayscale;
+//}
 .icon-play:before {
 	content: "\e600";
 }
